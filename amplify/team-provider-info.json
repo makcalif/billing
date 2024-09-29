@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-afucbilling-dev-16cdc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::287758680514:role/amplify-afucbilling-dev-16cdc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::287758680514:role/amplify-afucbilling-dev-16cdc-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-afucbilling-dev-16cdc-deployment",
+      "UnauthRoleName": "amplify-afucbilling-dev-16cdc-unauthRole",
+      "StackName": "amplify-afucbilling-dev-16cdc",
+      "StackId": "arn:aws:cloudformation:us-east-1:287758680514:stack/amplify-afucbilling-dev-16cdc/b755ebe0-7e11-11ef-a3e5-0e84d175f4af",
+      "AmplifyAppId": "ddbrkowincyss"
+    },
+    "categories": {
+      "auth": {
+        "afucbilling02cd1a18": {}
+      }
+    }
+  }
+}
