@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-afucbilling-dev-16cdc-unauthRole",
       "StackName": "amplify-afucbilling-dev-16cdc",
       "StackId": "arn:aws:cloudformation:us-east-1:287758680514:stack/amplify-afucbilling-dev-16cdc/b755ebe0-7e11-11ef-a3e5-0e84d175f4af",
-      "AmplifyAppId": "ddbrkowincyss"
+      "AmplifyAppId": "ddbrkowincyss",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-afucbilling-dev-16cdc-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -17,6 +18,15 @@
       },
       "storage": {
         "bankreports": {}
+      },
+      "function": {
+        "afucBillingBank": {
+          "deploymentBucketName": "amplify-afucbilling-dev-16cdc-deployment",
+          "s3Key": "amplify-builds/afucBillingBank-765465414e72487a5353-build.zip"
+        }
+      },
+      "api": {
+        "apicomparebank": {}
       }
     }
   }

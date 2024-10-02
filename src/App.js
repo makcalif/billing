@@ -8,6 +8,7 @@ import { Amplify } from 'aws-amplify';
 // Import the page components
 import Home from './pages/Home';
 import Bank from './pages/Bank';
+import Compare from './pages/Compare';
 // import Services from './pages/Services';
 // import Portfolio from './pages/Portfolio';
 // import Contact from './pages/Contact';
@@ -74,8 +75,8 @@ function App() {
                   <ul className="menu">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/bank">Bank</Link></li>
-                    {/* <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/compare">Compare</Link></li>
+                    {/*<li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/contact">Contact</Link></li> */}
                   </ul>
                 </nav>
@@ -85,8 +86,8 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/bank" element={<Bank />} />
-                  {/* <Route path="/services" element={<Services />} />
-                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/compare" element={<Compare />} />
+                  {/*<Route path="/portfolio" element={<Portfolio />} />
                   <Route path="/contact" element={<Contact />} /> */}
                 </Routes>
               </main>

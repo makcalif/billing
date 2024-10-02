@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/bank/{file}": {
+      "name": "/bank/{file}",
+      "lambdaFunction": "afucBillingBank",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create"
+        ]
+      }
+    }
+  }
+}

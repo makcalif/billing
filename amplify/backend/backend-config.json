@@ -1,4 +1,20 @@
 {
+  "api": {
+    "apicomparebank": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "afucBillingBank"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "afucbilling02cd1a18": {
       "customAuth": false,
@@ -25,6 +41,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "afucBillingBank": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_afucBillingBank_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "afucBillingBank"
+        }
+      ]
+    },
+    "AMPLIFY_function_afucBillingBank_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "afucBillingBank"
+        }
+      ]
     }
   },
   "storage": {

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-amplify/api-rest": "^4.0.50",
     "@aws-amplify/storage": "^6.6.7",
     "@aws-amplify/ui-react": "^6.5.1",
     "@aws-amplify/ui-react-storage": "^3.3.5",
