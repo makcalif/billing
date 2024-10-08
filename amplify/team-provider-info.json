@@ -22,11 +22,16 @@
       "function": {
         "afucBillingBank": {
           "deploymentBucketName": "amplify-afucbilling-dev-16cdc-deployment",
-          "s3Key": "amplify-builds/afucBillingBank-765465414e72487a5353-build.zip"
+          "s3Key": "amplify-builds/afucBillingBank-424c743168564a2f5767-build.zip"
+        },
+        "afucBankLambda": {
+          "deploymentBucketName": "amplify-afucbilling-dev-16cdc-deployment",
+          "s3Key": "amplify-builds/afucBankLambda-425632424a536d684b45-build.zip"
         }
       },
       "api": {
-        "apicomparebank": {}
+        "apicomparebank": {},
+        "afucApiOne": {}
       }
     }
   }

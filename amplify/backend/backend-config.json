@@ -1,5 +1,19 @@
 {
   "api": {
+    "afucApiOne": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "afucBankLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "apicomparebank": {
       "dependsOn": [
         {
@@ -44,6 +58,27 @@
     }
   },
   "function": {
+    "afucBankLambda": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "afucbilling02cd1a18"
+        },
+        {
+          "attributes": [
+            "BucketName"
+          ],
+          "category": "storage",
+          "resourceName": "bankreports"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "afucBillingBank": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -51,6 +86,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_afucBankLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "afucBankLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_afucBankLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "afucBankLambda"
+        }
+      ]
+    },
     "AMPLIFY_function_afucBillingBank_deploymentBucketName": {
       "usedBy": [
         {

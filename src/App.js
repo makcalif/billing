@@ -15,8 +15,36 @@ import Compare from './pages/Compare';
 
 import './App.css';
 
-Amplify.configure(awsconfig);
+// Amplify.configure(awsconfig);
+Amplify.configure(awsconfig); 
+const existingConfig = Amplify.getConfig(); 
 
+
+// Amplify.configure({
+//   ...awsconfig,
+//   API: {
+//     ...existingConfig.API, 
+//     REST: {
+//       ...existingConfig.API?.REST, 
+//       'apicomparebank': {
+//         endpoint: 'https://ju1d8zfbrf.execute-api.us-east-1.amazonaws.com/dev',
+//         region: 'us-east-1'
+//       }
+//     }
+//   }});
+
+console.log('existingConfig:', Amplify.getConfig());
+
+// Amplify.configure({
+//   ...awsconfig,
+//   API: {
+//     ...existingConfig.API,
+//     REST: outputs.custom.API,
+//   }});
+  
+
+  // console.log('existingConfig:', existingConfig);
+ 
 // function Home() {
 //   return (
 //     <section>

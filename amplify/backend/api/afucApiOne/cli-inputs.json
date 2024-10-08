@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "paths": {
+    "/bank/{date}": {
+      "name": "/bank/{date}",
+      "lambdaFunction": "afucBankLambda",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read"
+        ]
+      }
+    }
+  }
+}

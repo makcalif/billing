@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "auth": {
+      "afucbilling02cd1a18": [
+        "create",
+        "read"
+      ]
+    },
+    "storage": {
+      "bankreports": [
+        "create",
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

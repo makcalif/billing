@@ -1,0 +1,120 @@
+
+
+installed nvm
+
+then installed v22.9.0 (node js)
+    nvm install v22.9.0
+
+nvm use v22.9.0
+
+npm install -g aws-cdk
+
+conda install : conda install -y aws-cdk.aws-cognito
+
+
+--- log ---
+
+
+# conda remove --force aws-cdk.core
+pip install  aws-cdk-lib (no conda)
+conda install -c conda-forge awscli
+aws configure
+
+cd C:\Users\makca\OneDrive\Documents\dev\afuc
+cd cognito-auth-cdk
+cdk init app --language python
+create python script>>
+cdk bootstrap
+conda install -y aws_cdk
+cdk deploy
+
+arn:aws:cloudformation:us-east-1:287758680514:stack/CognitoAuthCdkStack/f6207680-7a36-11ef-882c-0affdc3634cd
+
+
+
+amplify pull --appId d2vvflf67p58tp --envName staging
+
+
+---- amplify setup
+created a react project 'billing'
+within billing dir : amplify configure
+created user with access key and updted in amplify cmd line
+amplify init
+
+
+build failed : i am deploying app in aws amplify and getting error:
+: !!! Unable to assume specified IAM Role. Please ensure the selected IAM Role has sufficient permissions and the Trust Relationship is configured correctly.
+
+amplify-afucbilling-dev-16cdc-authRole added permissions and trust relationship as below:
+
+                {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Federated": "cognito-identity.amazonaws.com"
+                            },
+                            "Action": "sts:AssumeRoleWithWebIdentity",
+                            "Condition": {
+                                "StringEquals": {
+                                    "cognito-identity.amazonaws.com:aud": "us-east-1:059deae1-bb77-4b91-ba20-900d6acef459"
+                                },
+                                "ForAnyValue:StringLike": {
+                                    "cognito-identity.amazonaws.com:amr": "authenticated"
+                                }
+                            }
+                        },
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "amplify.amazonaws.com"
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+
+created empty proj in git 'billing' then checked in code
+---
+git init
+git status
+git add .
+git status
+git config user.email '...@yahoo.com
+git config user.name '....'
+git commit -m 'first'
+git status
+git branch -M main
+git remote add origin https://github.com/makcalif/billing.git
+git push -u origin main
+
+
+npm install -g @aws-amplify/cli
+amplify configure
+amplify init
+amplify add auth
+amplify push
+
+npm install --save aws-amplify @aws-amplify/ui-react
+npm start
+
+
+-- s3 upload setup
+npm install @aws-amplify/ui-react-storage aws-amplify
+
+-- added api (amplify add api)
+
+'amplify push' failed b/c conda env 'first' was python ver 3.10
+
+created a new env 'py38' and installed: pip install pipenv
+then did 'amplify push' and that seemed to work
+    REST API endpoint: https://ju1d8zfbrf.execute-api.us-east-1.amazonaws.com/dev
+
+install: npm install @aws-amplify/api-rest
+
+-----
+>conda create --name py39 python=3.9 (this didn't help as local install of python doesn't matter when deployment fails)
+
+you have to update amplify build yaml based on this note:
+https://docs.aws.amazon.com/amplify/latest/userguide/troubleshooting-AL2023.html
